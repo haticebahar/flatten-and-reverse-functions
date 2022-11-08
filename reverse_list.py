@@ -20,3 +20,23 @@ def reverse(mylist):
 
 mylist = [[1, 2], [3, 4], [5, 6, 7]] # given input 
 reverse(mylist)
+
+
+
+
+def DifferentCases(str): 
+    newStr = ''
+    finalWord = []
+    
+    for char in str:
+        if char.isalpha():
+            newStr += char
+        else:
+            newStr += ' '
+            
+    for word in newStr.split():
+        word = word.replace(word[0], word[0].upper())
+        word = word.replace(word[1:len(word)], word[1:len(word)].lower())
+        finalWord.append(word)
+        
+    return ''.join(finalWord)
